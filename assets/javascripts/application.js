@@ -13,22 +13,23 @@ $(function() {
     offset: '20%'
   });
 
-  $('#section_1').click(function() {
+  $('.down:eq(0)').click(function() {
     $('html, body').animate({
       scrollTop: $("#section_2").offset().top
     }, 1000);
   })
 
-  $('#logo').addClass('fadeInDown animated');
+  fadeInLoad('#logo', 0, 'fadeInDown');
+  fadeInLoad('#about', 600, 'fadeIn');
+  fadeInLoad('#usp_1', 600, 'fadeIn');
+  fadeInLoad('#usp_2', 600, 'fadeIn');
+  fadeInLoad('#downloads', 800, 'fadeIn');
+  fadeInLoad('.down:eq(0)', 800, 'fadeIn');
 
-  fadeInLoad('#about', 400);
-  fadeInLoad('#usp_1', 600);
-  fadeInLoad('#usp_2', 800);
-
-  function fadeInLoad(el, delayTime) {
+  function fadeInLoad(el, delayTime, anim) {
     $(el).addClass('hidden').delay(delayTime).queue(function(next){
-      $(this).removeClass('hidden').addClass('fadeInDown animated').dequeue();
+      $(this).removeClass('hidden').addClass(anim +' animated').dequeue();
     });
-  }
+  };
   
 });

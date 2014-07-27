@@ -3,9 +3,12 @@ body {
   color: white;
 }
 
+h1, h2, h3, p {
+  padding: 10px 0;
+}
+
 p {
   font-size: 1em;
-  padding: 20px 0;
 }
 
 h1 {
@@ -18,8 +21,4 @@ h2 {
 
 h3 {
   font-size: 2em;
-}
-
-.text_block {
-  padding: 40px 0;
 }
