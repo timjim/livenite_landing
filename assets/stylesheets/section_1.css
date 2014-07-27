@@ -13,7 +13,7 @@
 }
 
 #downloads {
-  padding: 40px 0;
+  padding-bottom: 40px;
 }
 
 .dl:first-child {
@@ -22,4 +22,22 @@
 
 .dl {
   width: 40%;
+}
+
+.dl:hover{
+  cursor: pointer;
+}
+
+#iphone_wrap {
+  position: relative;
+  width: 100%;
+}
+
+#cycle {
+  position: absolute;
+  top: 15%;
+  right: 8%;
+  height: 70.5%;
+  width: 83%;
+  background-color: yellow;
 }
