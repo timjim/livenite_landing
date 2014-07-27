@@ -1,0 +1,51 @@
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+#section_1, #section_2, #section_3 {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+#section_1 {
+  background-color: #01193F;
+}
+
+#section_2 {
+  background-color: #088FFF;
+}
+
+#section_3 {
+  background-color: green;
+}
+
+.wrap {
+  margin: 0 auto;
+  max-width: 1080px;
+  padding: 4% 8%;
+  overflow: hidden;
+}
+
+.left {
+  float: left;
+  max-width: 64%;
+}
+
+.right {
+  float: right;
+  max-width: 30%;
+}
+
+.text_block {
+  width: 100%;
+}
+
+.border {
+  border: solid black 1px;
+}
+
+.hidden {
+  display: none;
+}

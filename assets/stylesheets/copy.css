@@ -1,0 +1,25 @@
+body {
+  font-family: 'Quattrocento Sans', helvetica, sans-serif;
+  color: white;
+}
+
+p {
+  font-size: 1em;
+  padding: 20px 0;
+}
+
+h1 {
+  font-size: 4em;
+}
+
+h2 {
+  font-size: 3em;
+}
+
+h3 {
+  font-size: 2em;
+}
+
+.text_block {
+  padding: 40px 0;
+}

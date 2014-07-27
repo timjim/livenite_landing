@@ -1,0 +1,12 @@
+#logo {
+  width: 100%;
+}
+
+#iphone {
+  width: 100%;
+  max-width: 600px;
+}
+
+#about {
+  margin-left: -2px;
+}
