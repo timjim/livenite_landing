@@ -1,6 +1,6 @@
 #logo {
   width: 100%;
-  max-width: 600px;
+  max-width: 400px;
 }
 
 #iphone {
@@ -9,7 +9,8 @@
 }
 
 #about {
-  margin-left: -2px;
+  line-height: 1.4em;
+  padding: 40px 0 30px 0;
 }
 
 #downloads {
@@ -21,7 +22,7 @@
 }
 
 .dl {
-  width: 40%;
+  width: 200px;
 }
 
 .dl:hover{
@@ -39,5 +40,24 @@
   right: 8%;
   height: 70.5%;
   width: 83%;
-  background-color: yellow;
 }
+
+.slide {
+  width: 100%;
+  height: 100%;
+  background-color: #01193F;
+  text-align: center;
+}
+
+#bottom a:link, #bottom a:hover, #bottom a:active, #bottom a:visited {
+  color: #DC9F09;
+}
+
+#business {
+  margin-left: 40px;
+  line-height: 88px;
+  padding: 0;
+  float: left;
+  text-decoration: underline;
+}
+

@@ -14,14 +14,19 @@
   <script type="text/javascript" src="assets/javascripts/jquery.min.js"></script>
   <script type="text/javascript" src="assets/javascripts/skrollr.min.js"></script>
   <script type="text/javascript" src="assets/javascripts/waypoints.min.js"></script>
+  <script type="text/javascript" src="assets/javascripts/jquery.cycle.all.js"></script>
   <script type="text/javascript" src="assets/javascripts/application.js"></script>
 
   <meta name="viewport" content="width=device-width, height=device-height minimum-scale=1, maximum-scale=1">
 </head>
 <body>
 
-  <div id="fixed_header">
-    <h2>Test</h2>
+  <div id="fixed_header" class="hidden">
+    <div id="header_content">
+      <img src="assets/images/livenite.png" id="header_img">
+      <img src="assets/images/app_store.png" class="hdl">
+      <img src="assets/images/app_store.png" class="hdl">
+    </div>
   </div>
 
   <div id="section_1">
@@ -29,22 +34,28 @@
       <div class="left">
         <img src="assets/images/livenite.png" id="logo">
         <div class="text_block">
-          <h1 id="about">Good nights every night</h1>
-          <h2 id="usp_1">Some words put here</h2>
-          <h2 id="usp_2">Some words put here</h3>
+          <h1 id="about">A guy walks into a bar...<br>and it's really bad</h1>
+          <h2 class="usp"><div class="arrow_right"></div>Find where to go to next in seconds</h2>
+          <h2 class="usp"><div class="arrow_right"></div>Discover new places around the corner</h2>
+          <h2 class="usp"><div class="arrow_right"></div>No flyers. No tickets.</h3>
         </div>
         <div id="downloads">
           <img src="assets/images/app_store.png" class="dl">
           <img src="assets/images/app_store.png" class="dl">
         </div>
-        <div class="down">
-          <div class="arrow_down"></div>
+        <div id="bottom">
+          <div class="down">
+            <div class="arrow_down"></div>
+          </div>
+          <a href="#"><h4 id="business">I want to put my business on the map</h4></a>
         </div>
       </div>
       <div class="right">
         <div id="iphone_wrap">
           <img src="assets/images/iphone.png" id="iphone">
           <div id="cycle">
+            <div class="slide"><h2>Slide 1</h2></div>
+            <div class="slide hidden"><h2>Slide 2</h2></div>
           </div>
         </div>
       </div>
