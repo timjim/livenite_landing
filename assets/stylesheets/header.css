@@ -9,16 +9,22 @@
 
 #header_content {
   max-width: 1080px;
-  margin: 28px auto;
+  margin: 0 auto;
 }
 
 #header_img {
   height: 40%;
   float: left;
+  margin-top: 28px;
 }
 
 .hdl {
   float: right;
   height: 40%;
   margin-left: 28px;
+  margin-top: 28px;
+}
+
+.hdl:hover {
+  cursor: pointer;
 }

@@ -31,6 +31,12 @@ $(function() {
     }, 1000);
   })
 
+  $('.up:eq(0)').click(function() {
+    $('html, body').animate({
+      scrollTop: $("#section_1").offset().top
+    }, 1000);
+  })
+
   $('#slide').show();
 
   $('#cycle').cycle({ 
