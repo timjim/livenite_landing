@@ -7,21 +7,11 @@ $(function() {
   hidden($('.screenshot'));
 
   var section1Height = $('#section_1').height();
-  var section2Height = $('#section_2').height();
-  var section3Height = $('#section_3').height();
-  var section4Height = $('#section_4').height();
-
-  console.log(section1Height);
-  console.log(section2Height);
-  console.log(section3Height);
-  console.log(section4Height);
 
   $('#section_1').attr('data-0', 'background-color: rgb(1,25,63);');
   $('#section_1').attr('data-'+section1Height, 'background-color: rgb(0,0,0);');
   $('#iphone_wrap').attr('data-0', 'top:40px;');
   $('#iphone_wrap').attr('data-'+section1Height, 'top:140px;');
-  $('#iphone_wrap').attr('data-'+(section1Height+section2Height+section3Height), 'opacity:1;');
-  $('#iphone_wrap').attr('data-'+(section1Height+section2Height+section3Height+section4Height), 'opacity:0;');
 
   var s = skrollr.init({forceHeight: false});
 
@@ -39,6 +29,16 @@ $(function() {
     }
   }, {
     offset: '20%'
+  });
+
+  $('#section_4').waypoint(function(direction) {
+    if(direction==='down') {
+      $('#iphone_wrap').animate({'top': '-=-800px'},'slow');
+    }else{
+      $('#iphone_wrap').animate({'top': '-=800px'},'slow');
+    }
+  }, {
+    offset: '40%'
   });
 
   hidden($('.about_2'));
@@ -113,7 +113,6 @@ $(function() {
   unhide($('.slide'));
   unhide($('#section_1 .down'));
   unhide($('#fixed_header .up'));
-
 
   function unhide ($el) {
     $el.removeClass('hidden');
