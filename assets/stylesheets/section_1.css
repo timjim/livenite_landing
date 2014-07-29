@@ -8,7 +8,7 @@
   max-width: 600px;
 }
 
-#about {
+.about, .about_2, .about_3, .about_4 {
   line-height: 1.4em;
   padding: 40px 0 30px 0;
 }
@@ -30,8 +30,8 @@
 }
 
 #iphone_wrap {
-  position: relative;
   width: 100%;
+  z-index: 2;
 }
 
 #cycle {
@@ -54,7 +54,6 @@
 }
 
 #business {
-  margin-left: 40px;
   line-height: 88px;
   padding: 0;
   float: left;
