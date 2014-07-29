@@ -31,7 +31,7 @@
 
 #iphone_wrap {
   width: 100%;
-  z-index: 2;
+  z-index: 100;
 }
 
 #cycle, #cycle_2, #cycle_3 {

@@ -99,6 +99,7 @@ html, body {
 .fixed {
   position: fixed;
   right: 12%;
+  -webkit-transform: translateZ(0);
 }
 
 .relative {
@@ -113,4 +114,14 @@ html, body {
   content: "";
   display: table;
   clear: both;
+}
+
+#section_4 {
+  position: relative;
+}
+
+#section_4 video {
+  position: absolute;
+  top: 0;
+  z-index: -1;
 }

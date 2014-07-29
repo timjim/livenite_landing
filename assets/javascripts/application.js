@@ -7,6 +7,8 @@ $(function() {
   hidden($('.screenshot'));
 
   var section1Height = $('#section_1').height();
+  var section4Height = $('#section_4').height();
+  var section4Width = $('#section_4').width();
 
   $('#section_1').attr('data-0', 'background-color: rgb(1,25,63);');
   $('#section_1').attr('data-'+section1Height, 'background-color: rgb(0,0,0);');
@@ -133,6 +135,7 @@ $(function() {
     unhide($('#section_4'));
     fadeInLoad('.about_4', 0, 'fadeIn');
     fadeInLoad('#section_4 .up', 400, 'fadeIn');
+    $('#section_4 video').get(0).play();
     },{
     offset: '40%',
     triggerOnce: true
@@ -178,7 +181,7 @@ $(function() {
     fx:'scrollLeft',
     timeout:  4000 
   });
-  
+
   fadeInLoad('#logo', 0, 'fadeInDown');
   fadeInLoad('.about', 400, 'fadeIn');
   fadeInLoad('.usp', 800, 'fadeIn');
@@ -192,5 +195,8 @@ $(function() {
       $(this).removeClass('hidden').addClass(anim +' animated').dequeue();
     });
   };
+
+  
+  $('#test_video').attr('width', section4Width);
  
 });
