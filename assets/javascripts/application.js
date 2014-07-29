@@ -21,14 +21,66 @@ $(function() {
         { opacity: 1 },
         { queue: false, duration: 'normal' }
       );
+      $('#cycle').fadeOut('slow', function(){
+        $(this).addClass('hidden');
+      });
+      $('#cycle_2').fadeIn('slow', function(){
+        $(this).removeClass('hidden');
+      });
     }else{
       $('#fixed_header').css('opacity', 1).slideUp('normal').animate(
         { opacity: 0 },
         { queue: false, duration: 'normal' }
       );
+      $('#cycle_2').fadeOut('slow', function(){
+        $(this).addClass('hidden');
+      });
+      $('#cycle').fadeIn('slow', function(){
+        $(this).removeClass('hidden');
+      });
     }
   }, {
     offset: '20%'
+  });
+
+  $('#section_2').waypoint(function() {
+    $('#cycle_2').cycle({ 
+      fx:'scrollLeft',
+      timeout:  4000 
+    });
+    },{
+    offset: '15%',
+    triggerOnce: true
+  });
+
+  $('#section_3').waypoint(function(direction) {
+    if(direction==='down') {
+      $('#cycle_2').fadeOut('slow', function(){
+        $(this).addClass('hidden');
+      });
+      $('#cycle_3').fadeIn('slow', function(){
+        $(this).removeClass('hidden');
+      });
+    }else{
+      $('#cycle_3').fadeOut('slow', function(){
+        $(this).addClass('hidden');
+      });
+      $('#cycle_2').fadeIn('slow', function(){
+        $(this).removeClass('hidden');
+      });
+    }
+  }, {
+    offset: '20%'
+  });
+
+  $('#section_3').waypoint(function() {
+    $('#cycle_3').cycle({ 
+      fx:'scrollLeft',
+      timeout:  4000 
+    });
+    },{
+    offset: '15%',
+    triggerOnce: true
   });
 
   $('#section_4').waypoint(function(direction) {
@@ -126,7 +178,7 @@ $(function() {
     fx:'scrollLeft',
     timeout:  4000 
   });
-
+  
   fadeInLoad('#logo', 0, 'fadeInDown');
   fadeInLoad('.about', 400, 'fadeIn');
   fadeInLoad('.usp', 800, 'fadeIn');
