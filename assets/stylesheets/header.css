@@ -10,6 +10,7 @@
 #header_content {
   max-width: 1080px;
   margin: 0 auto;
+  padding: 0 40px;
 }
 
 #header_img {

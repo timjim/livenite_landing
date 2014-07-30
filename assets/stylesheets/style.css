@@ -38,6 +38,12 @@ html, body {
   padding: 4% 8%;
 }
 
+@media (max-width: 1024px) {
+  #section_1 .wrap {
+    padding: 6% 8%;
+  }
+}
+
 .left {
   float: left;
   width: 64%;
@@ -100,10 +106,19 @@ html, body {
   position: fixed;
   right: 12%;
   -webkit-transform: translateZ(0);
+  width: 24%;
+}
+
+@media (max-width: 1024px) {
+  .fixed {
+    right: 8%;
+    width: 28%;
+  }
 }
 
 .relative {
   position: relative;
+  width: 100%;
 }
 
 .centered {

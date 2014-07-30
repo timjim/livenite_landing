@@ -2,9 +2,10 @@ $(function() {
 
   $('#iphone_wrap').removeClass('relative');
   $('#iphone_wrap').addClass('fixed');
-  $('#iphone_wrap').css('width', '24%');
 
   hidden($('.screenshot'));
+
+  var pageWidth = $('body').width()
 
   var section1Height = $('#section_1').height();
   var section4Height = $('#section_4').height();
@@ -12,7 +13,13 @@ $(function() {
 
   $('#section_1').attr('data-0', 'background-color: rgb(1,25,63);');
   $('#section_1').attr('data-'+section1Height, 'background-color: rgb(0,0,0);');
-  $('#iphone_wrap').attr('data-0', 'top:40px;');
+  
+  if (pageWidth > 1024) {
+    $('#iphone_wrap').attr('data-0', 'top:40px;');
+  } else if (pageWidth<=1024) {
+    $('#iphone_wrap').attr('data-0', 'top:80px;')
+  }
+  
   $('#iphone_wrap').attr('data-'+section1Height, 'top:140px;');
 
   var s = skrollr.init({forceHeight: false});
