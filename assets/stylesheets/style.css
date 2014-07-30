@@ -173,9 +173,3 @@ html, body {
 #section_4 {
   position: relative;
 }
-
-#section_4 video {
-  position: absolute;
-  top: 0;
-  z-index: -1;
-}
