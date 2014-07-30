@@ -9,9 +9,6 @@ $(function() {
   var section1Height = $('#section_1').height();
   var section4Height = $('#section_4').height();
   var section4Width = $('#section_4').width();
-
-  $('#section_1').attr('data-0', 'background-color: rgb(1,25,63);');
-  $('#section_1').attr('data-'+section1Height, 'background-color: rgb(0,0,0);');
   
   if (pageWidth > 1024) {
     var yolo = '40px';
@@ -21,7 +18,15 @@ $(function() {
 
   $('#iphone_wrap').css('top', yolo )
 
-  var s = skrollr.init({forceHeight: false});
+  $('#section_2').waypoint(function(direction) {
+    if(direction==='down') {
+      $('#section_1').animate({ backgroundColor: 'rgb(0,0,0)'}, { queue: false, duration: 'normal' });
+    }else{
+      $('#section_1').animate({ backgroundColor: 'rgb(1,25,63)'}, { queue: false, duration: 'normal' });
+    }
+  },{
+    offset: '40%'
+  });  
 
   if (pageWidth > 320) {
     $('#section_2').waypoint(function(direction) {
