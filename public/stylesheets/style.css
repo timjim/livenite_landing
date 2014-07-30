@@ -58,7 +58,7 @@ html, body {
     width: 100%;
   }
 
-  .right {
+  .right, #iphone_wrap {
     display: none;
   }
 }
