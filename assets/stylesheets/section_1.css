@@ -9,6 +9,12 @@
   }
 }
 
+@media (max-width: 320px) {
+  #logo {
+    max-width: 100%;
+  }
+}
+
 #iphone {
   width: 100%;
   max-width: 600px;
@@ -23,6 +29,12 @@
   padding-bottom: 40px;
 }
 
+@media (max-width: 320px) {
+  #downloads {
+    padding-bottom: 10px;
+  }
+}
+
 .dl:first-child {
   margin-right: 5%;
 }
@@ -34,6 +46,12 @@
 @media (max-width: 800px) {
   .dl {
     width: 140px;
+  }
+}
+
+@media (max-width: 320px) {
+  .dl {
+    width: 120px;
   }
 }
 
@@ -80,5 +98,11 @@
   padding: 0;
   float: left;
   text-decoration: underline;
+}
+
+@media (max-width: 800px) {
+  #business {
+    line-height: 68px;
+  }
 }
 

@@ -26,6 +26,12 @@
   margin-top: 25px;
 }
 
+@media (max-width: 720px) {
+  .hdl { 
+    height: 40%;
+  }
+}
+
 .hdl:hover {
   cursor: pointer;
 }
@@ -48,4 +54,14 @@
   border-style: solid;
   border-width: 0 10px 17.3px 10px;
   border-color: transparent transparent white transparent;
+}
+
+@media (max-width: 320px) {
+  #fixed_header {
+    display: none;
+  }
+
+  .up {
+    display: none;
+  }
 }

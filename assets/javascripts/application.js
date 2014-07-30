@@ -19,38 +19,40 @@ $(function() {
   } else if (pageWidth<=1024) {
     $('#iphone_wrap').attr('data-0', 'top:80px;')
   }
-  
+
   $('#iphone_wrap').attr('data-'+section1Height, 'top:140px;');
 
   var s = skrollr.init({forceHeight: false});
 
-  $('#section_2').waypoint(function(direction) {
-    if(direction==='down') {
-      $('#fixed_header').css('opacity', 0).slideDown('normal').animate(
-        { opacity: 1 },
-        { queue: false, duration: 'normal' }
-      );
-      $('#cycle').fadeOut('slow', function(){
-        $(this).addClass('hidden');
-      });
-      $('#cycle_2').fadeIn('slow', function(){
-        $(this).removeClass('hidden');
-      });
-    }else{
-      $('#fixed_header').css('opacity', 1).slideUp('normal').animate(
-        { opacity: 0 },
-        { queue: false, duration: 'normal' }
-      );
-      $('#cycle_2').fadeOut('slow', function(){
-        $(this).addClass('hidden');
-      });
-      $('#cycle').fadeIn('slow', function(){
-        $(this).removeClass('hidden');
-      });
-    }
-  }, {
-    offset: '20%'
-  });
+  if (pageWidth > 320) {
+    $('#section_2').waypoint(function(direction) {
+      if(direction==='down') {
+        $('#fixed_header').css('opacity', 0).slideDown('normal').animate(
+          { opacity: 1 },
+          { queue: false, duration: 'normal' }
+        );
+        $('#cycle').fadeOut('slow', function(){
+          $(this).addClass('hidden');
+        });
+        $('#cycle_2').fadeIn('slow', function(){
+          $(this).removeClass('hidden');
+        });
+      }else{
+        $('#fixed_header').css('opacity', 1).slideUp('normal').animate(
+          { opacity: 0 },
+          { queue: false, duration: 'normal' }
+        );
+        $('#cycle_2').fadeOut('slow', function(){
+          $(this).addClass('hidden');
+        });
+        $('#cycle').fadeIn('slow', function(){
+          $(this).removeClass('hidden');
+        });
+      }
+    }, {
+      offset: '20%'
+    });
+  }
 
   $('#section_2').waypoint(function() {
     $('#cycle_2').cycle({ 
