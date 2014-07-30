@@ -14,12 +14,12 @@ $(function() {
   $('#section_1').attr('data-'+section1Height, 'background-color: rgb(0,0,0);');
   
   if (pageWidth > 1024) {
-    $('#iphone_wrap').attr('data-0', 'top:40px;');
+    var yolo = '40px';
   } else if (pageWidth<=1024) {
-    $('#iphone_wrap').attr('data-0', 'top:80px;')
+    var yolo = '80px';
   }
 
-  $('#iphone_wrap').attr('data-'+section1Height, 'top:140px;');
+  $('#iphone_wrap').css('top', yolo )
 
   var s = skrollr.init({forceHeight: false});
 
@@ -30,6 +30,8 @@ $(function() {
           { opacity: 1 },
           { queue: false, duration: 'normal' }
         );
+        $('#iphone_wrap').animate({ top: '140px' },
+          { duration: 'normal' });
         $('#cycle').fadeOut('slow', function(){
           $(this).addClass('hidden');
         });
@@ -41,6 +43,8 @@ $(function() {
           { opacity: 0 },
           { queue: false, duration: 'normal' }
         );
+        $('#iphone_wrap').animate({ top: yolo },
+          { duration: 'normal' });
         $('#cycle_2').fadeOut('slow', function(){
           $(this).addClass('hidden');
         });
