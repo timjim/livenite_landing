@@ -55,7 +55,7 @@ html, body {
   overflow: hidden;
 }
 
-@media (max-width: 320px) {
+@media (max-width: 600px) {
   .left {
     width: 100%;
   }
@@ -152,6 +152,12 @@ html, body {
   .fixed {
     right: 8%;
     width: 28%;
+  }
+}
+
+@media (max-width: 840px) {
+  .fixed {
+    right: 6%;
   }
 }
 

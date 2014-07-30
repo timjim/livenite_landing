@@ -6,7 +6,6 @@ $(function() {
   hidden($('.screenshot'));
 
   var pageWidth = $('body').width()
-
   var section1Height = $('#section_1').height();
   var section4Height = $('#section_4').height();
   var section4Width = $('#section_4').width();
