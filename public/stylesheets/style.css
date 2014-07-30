@@ -7,7 +7,6 @@ html, body {
 #section_1, #section_2, #section_3, #section_4 {
   min-height: 100%;
   width: 100%;
-  overflow: hidden;
 }
 
 #section_1 {
