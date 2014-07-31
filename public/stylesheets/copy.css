@@ -68,7 +68,7 @@ h4 {
 }
 
 
-@media (max-width: 320px) {
+@media (max-width: 360px) {
   h1 {
     font-size: 1.6em;
   }
