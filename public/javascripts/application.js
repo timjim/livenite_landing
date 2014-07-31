@@ -104,9 +104,9 @@ $(function() {
 
   $('#section_4').waypoint(function(direction) {
     if(direction==='down') {
-      $('#iphone_wrap').animate({'top': '-=-800px'},'slow');
+      $('#iphone_wrap').animate({'top': '-=-1400px'},'slow');
     }else{
-      $('#iphone_wrap').animate({'top': '-=800px'},'slow');
+      $('#iphone_wrap').animate({'top': '-=1400px'},'slow');
     }
   }, {
     offset: '40%'
