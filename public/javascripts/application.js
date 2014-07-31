@@ -28,7 +28,7 @@ $(function() {
     offset: '40%'
   });  
 
-  if (pageWidth > 320) {
+  if (pageWidth > 360) {
     $('#section_2').waypoint(function(direction) {
       if(direction==='down') {
         $('#fixed_header').css('opacity', 0).slideDown('normal').animate(
