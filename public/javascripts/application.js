@@ -123,6 +123,7 @@ $(function() {
     fadeInLoad('.about_2', 0, 'fadeIn');
     fadeInLoad('.usp_2', 400, 'fadeIn');
     fadeInLoad('#section_2 .down', 800, 'fadeIn');
+    _gaq.push(['_trackEvent', 'Info', 'Seen', 'Section_2']);
     },{
     offset: '40%',
     triggerOnce: true
@@ -139,6 +140,7 @@ $(function() {
     fadeInLoad('.about_3', 0, 'fadeIn');
     fadeInLoad('.usp_3', 400, 'fadeIn');
     fadeInLoad('#section_3 .down', 800, 'fadeIn');
+    _gaq.push(['_trackEvent', 'Info', 'Seen', 'Section_3']);
     },{
     offset: '40%',
     triggerOnce: true
@@ -155,6 +157,7 @@ $(function() {
     fadeInLoad('.about_4', 0, 'fadeIn');
     fadeInLoad('#section_4 .up', 400, 'fadeIn');
     fadeInLoad('#section_4 .button', 400, 'fadeIn');
+    _gaq.push(['_trackEvent', 'Info', 'Seen', 'Section_4']);
     if (pageWidth > 360) {
       $('#section_4 video').get(0).play();
     }},{

@@ -13,6 +13,29 @@
 
   <link href='http://fonts.googleapis.com/css?family=Quattrocento+Sans' rel='stylesheet' type='text/css'>
 
+  <script type="text/javascript">
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-53471046-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-53471046-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
   <script type="text/javascript" src="javascripts/jquery.min.js"></script>
   <script type="text/javascript" src="javascripts/jquery.color.js"></script>
   <script type="text/javascript" src="javascripts/waypoints.min.js"></script>
@@ -27,8 +50,8 @@
     <div id="header_content">
       <img src="images/livenite.png" id="header_img">
       <div class="up"><div class="arrow_up"></div></div>
-      <img src="images/app_store.png" class="hdl">
-      <img src="images/google_play.png" class="hdl">
+      <img src="images/app_store.png" class="hdl" onClick="_gaq.push(['_trackEvent', 'Buttons', 'Download', 'App_Store']);">
+      <img src="images/google_play.png" class="hdl" onClick="_gaq.push(['_trackEvent', 'Buttons', 'Download', 'Google_Play']);">
     </div>
   </div>
 
@@ -46,10 +69,10 @@
           <img src="images/google_play.png" class="dl">
         </div>
         <div id="business">
-          <a href="#"><h4 id="business">I want to put my business on the map</h4></a>
+          <a href="#"><h4 id="business" onClick="_gaq.push(['_trackEvent', 'Business_Redirect', 'Business', 'Section_1']);">I want to put my business on the map</h4></a>
         </div>
         <div class="bottom">
-          <div class="down hidden">
+          <div class="down hidden" onClick="_gaq.push(['_trackEvent', 'Scroll', 'Down', 'Section_1']);">
             <div class="arrow_down"></div>
           </div>
         </div>
@@ -88,7 +111,7 @@
           <h2 class="usp_2"><div class="arrow_right"></div>No login required</h2>
         </div>
         <div class="bottom">
-          <div class="down hidden">
+          <div class="down hidden" onClick="_gaq.push(['_trackEvent', 'Scroll', 'Down', 'Section_2']);">
             <div class="arrow_down"></div>
           </div>
         </div>
@@ -109,7 +132,7 @@
           <h2 class="usp_3"><div class="arrow_right"></div>Leave your feedback</h2>
         </div>
         <div class="bottom">
-          <div class="down hidden">
+          <div class="down hidden" onClick="_gaq.push(['_trackEvent', 'Scroll', 'Down', 'Section_3']);">
             <div class="arrow_down"></div>
           </div>
         </div>
@@ -125,9 +148,9 @@
       <div class="left">
         <div class="text_block">
           <h1 class="about_4">Endorsed by Michael<br>from Bad Apple, Croydon</h1>
-          <div class="button">Watch video</div>
+          <div class="button" onClick="_gaq.push(['_trackEvent', 'Videos', 'Play', 'Michael Endorsement']);">Watch video</div>
         </div>
-        <div class="up hidden">
+        <div class="up hidden" onClick="_gaq.push(['_trackEvent', 'Scroll', 'Up', 'Section_4']);">
           <div class="arrow_up"></div>
         </div>
       </div>
