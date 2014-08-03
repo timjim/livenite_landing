@@ -146,14 +146,18 @@ $(function() {
 
   hidden($('.about_4'));
   hidden($('#section_4 .up'));
+  hidden($('#section_4 .button'));
 
   $('#section_4').waypoint(function() {
     unhide($('.about_4'));
-    unhide($('#section_4'));
+    unhide($('#section_4 .up'));
+    unhide($('#section_4 .button'));
     fadeInLoad('.about_4', 0, 'fadeIn');
     fadeInLoad('#section_4 .up', 400, 'fadeIn');
-    $('#section_4 video').get(0).play();
-    },{
+    fadeInLoad('#section_4 .button', 400, 'fadeIn');
+    if (pageWidth > 360) {
+      $('#section_4 video').get(0).play();
+    }},{
     offset: '40%',
     triggerOnce: true
   });
@@ -203,9 +207,9 @@ $(function() {
   fadeInLoad('.about', 400, 'fadeIn');
   fadeInLoad('.usp', 800, 'fadeIn');
   fadeInLoad('#downloads', 1000, 'fadeIn');
-  fadeInLoad('#bottom', 1000, 'fadeIn');
+  fadeInLoad('#business', 1000, 'fadeIn');
+  fadeInLoad('#section_1 .bottom', 1000, 'fadeIn');
   fadeInLoad('#section_1 .down', 1000, 'fadeIn');
-  fadeInLoad('#fixed_header .up', 1000, 'fadeIn');
 
   function fadeInLoad(el, delayTime, anim) {
     $(el).addClass('hidden').delay(delayTime).queue(function(next){
