@@ -90,6 +90,21 @@
   color: #DC9F09;
 }
 
+#nope a:link, #nope a:hover, #nope a:active, #nope a:visited {
+  color: white;
+}
+
+#nope h2 {
+  margin: 8% 0;
+  display: block; 
+}
+
+@media (max-width: 600px) {
+  #nope h2 {
+    margin: 12% 0;
+  }
+}
+
 #business h4 {
   line-height: 88px;
   padding: 0;
@@ -102,3 +117,21 @@
   }
 }
 
+.button {
+  background-color: rgb(9,143,255);
+  outline: none;
+  border: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  cursor: pointer;
+  margin: 0;
+  height: 44px;
+  font-size: 1.2em;
+  padding: 0 20px;
+}
+
+@media (max-width: 600px) {
+  .button {
+    width: 100%;
+  }
+}

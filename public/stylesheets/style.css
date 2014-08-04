@@ -4,7 +4,7 @@ html, body {
   background-color: #01193F;
 }
 
-#section_1, #section_2, #section_3, #section_4 {
+#section_1, #section_2, #section_3, #section_4, #signup_splash {
   min-height: 100%;
   width: 100%;
   overflow: auto;
@@ -111,9 +111,6 @@ html, body {
 }
 
 @media (max-width: 360px) {
-  .down {
-/*    display: none;*/
-  }
 }
 
 .arrow_right {
@@ -126,7 +123,7 @@ html, body {
   border-color: transparent transparent transparent white;
 }
 
-.button {
+.video_button {
   background-color: #088FFF;
   color: black;
   padding: 14px;
@@ -138,7 +135,7 @@ html, body {
   display: none;
 }
 
-.button:hover {
+.video_button:hover {
   cursor: pointer;
 }
 
@@ -151,7 +148,7 @@ html, body {
     display: none;
   }
 
-  .button {
+  .video_button {
     display: block;
   }
 }
@@ -201,4 +198,40 @@ html, body {
 
 #section_4 {
   position: relative;
+}
+
+#signup_splash {
+  background-color: rgba(0,0,0,0.94);
+  position: fixed;
+  padding: 8% 0;
+  z-index: 2000;
+  overflow: hidden;
+  display: none;
+}
+
+#mc_embed_signup {
+  max-width: 1080px;
+  padding: 4%;
+  margin: 0 auto;
+}
+
+#mc_embed_signup h2 {
+  margin-bottom: 40px;
+}
+
+#mce-EMAIL {
+  border: none;
+  font-size: 1.2em;
+  width: 40%;
+  padding: 10px;
+  height: 44px;
+  float: left;
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  #mce-EMAIL {
+    width: 100%;
+    font-size: 1em;
+  }
 }

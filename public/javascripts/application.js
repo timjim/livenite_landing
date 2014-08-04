@@ -148,15 +148,15 @@ $(function() {
 
   hidden($('.about_4'));
   hidden($('#section_4 .up'));
-  hidden($('#section_4 .button'));
+  hidden($('#section_4 .video_button'));
 
   $('#section_4').waypoint(function() {
     unhide($('.about_4'));
     unhide($('#section_4 .up'));
-    unhide($('#section_4 .button'));
+    unhide($('#section_4 .video_button'));
     fadeInLoad('.about_4', 0, 'fadeIn');
     fadeInLoad('#section_4 .up', 400, 'fadeIn');
-    fadeInLoad('#section_4 .button', 400, 'fadeIn');
+    fadeInLoad('#section_4 .video_button', 400, 'fadeIn');
     _gaq.push(['_trackEvent', 'Info', 'Seen', 'Section_4']);
     if (pageWidth > 360) {
       $('#section_4 video').get(0).play();
@@ -220,7 +220,32 @@ $(function() {
     });
   };
 
-  
   $('#test_video').attr('width', section4Width);
+
+  $('#downloads .dl:eq(0), .hdl:eq(1)').click(function() {
+    $('#signup_splash').fadeIn();
+    $('#mce-APP_TYPE').attr('value', 'iphone');
+  });
+
+  $('#downloads .dl:eq(1), .hdl:eq(0)').click(function() {
+    $('#signup_splash').fadeIn();
+    $('#mce-APP_TYPE').attr('value', 'google_play');
+  });
+
+  $('.button').click(function() {
+    event.preventDefault();
+    var that = $(this)
+    $(this).animate({ backgroundColor: 'rgb(220,159,9)'}, 600, function() {
+      that.attr('value', 'Thanks!');
+      $('#nope h2').text('Close');
+      $('#signup_splash').fadeOut("slow", function(){
+        $('.button').unbind(event).click();
+      });
+    });  
+  });
+  
+  $('#nope').click(function() {
+    $('#signup_splash').fadeOut();
+  });
  
 });
