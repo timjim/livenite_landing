@@ -229,6 +229,10 @@ html, body {
   margin: 0;
 }
 
+.screenshot_image {
+  width: 100%;
+}
+
 @media (max-width: 600px) {
   #mce-EMAIL {
     width: 100%;
