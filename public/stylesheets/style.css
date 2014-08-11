@@ -27,6 +27,11 @@ html, body {
   z-index: 4;
 }
 
+#upleft {
+  float: left;
+  margin: 0;
+}
+
 .wrap {
   margin: 0 auto;
   max-width: 1080px;
