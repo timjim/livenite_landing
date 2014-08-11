@@ -204,9 +204,17 @@ $(function() {
   }
 
   $('#cycle').cycle({ 
-    fx:'scrollLeft',
-    timeout:  4000 
+    fx:'fade,wipe,scrollLeft, fade',
+    randomizeEffects: false, 
+    timeoutFn: calculateTimeout, 
+    clip:   't2b'  
   });
+
+  function calculateTimeout(currElement, nextElement, opts, isForward) { 
+    var timeouts = [2,0.4,3,8]; 
+    var index = opts.currSlide; 
+    return timeouts[index] * 1000; 
+  } 
 
   fadeInLoad('#logo', 0, 'fadeInDown');
   fadeInLoad('.about', 400, 'fadeIn');
