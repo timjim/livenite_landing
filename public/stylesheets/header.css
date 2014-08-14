@@ -26,6 +26,10 @@
   margin-top: 24px;
 }
 
+.hdl:hover {
+  cursor: pointer;
+}
+
 @media (max-width: 720px) {
   .hdl { 
     margin-top: 32px;
@@ -40,8 +44,10 @@
   }
 }
 
-.hdl:hover {
-  cursor: pointer;
+@media (max-width: 599px) {
+  .hdl { 
+    display: none;
+  }
 }
 
 .up {
@@ -68,5 +74,4 @@
   #fixed_header {
     display: none;
   }
-
 }
