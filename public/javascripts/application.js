@@ -267,5 +267,7 @@ $(function() {
   $('#nope').click(function() {
     $('#signup_splash').fadeOut();
   });
+
+  $(window).resize(function(){location.reload();});
  
 });
