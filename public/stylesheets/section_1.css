@@ -22,27 +22,38 @@
 
 .about, .about_2, .about_3, .about_4 {
   line-height: 1.4em;
-  padding: 40px 0 30px 0;
+  padding: 40px 0 35px 0;
+}
+
+#downloads {
+  padding-bottom: 40px;
 }
 
 @media (max-width: 360px) {
   #downloads {
-    padding-bottom: 10px;
+    padding-bottom: 50px;
   }
-}
-
-.dl:first-child {
-  margin-right: 4%;
 }
 
 .dl {
   height: 68px;
-  margin: 1% 0
+  margin: 1% 24px 1% 0;
+  line-height: 34px;
+  display: inline-block;
+}
+
+
+
+@media (max-width: 1250px) {
+  .dl {
+    margin-right: 12px;
+  }
 }
 
 @media (max-width: 800px) {
   .dl {
     height: 48px;
+    line-height: 24px;
   }
 }
 
@@ -56,8 +67,19 @@
   cursor: pointer;
 }
 
+.dl:last-child {
+  margin-right: 0;
+}
+
 #iphone_wrap {
   z-index: 100;
+  top: 40px;
+}
+
+@media (max-width: 1024px) {
+  #iphone_wrap {
+    top: 80px;
+  }
 }
 
 #cycle, #cycle_2, #cycle_3 {
@@ -75,7 +97,8 @@
 }
 
 #business a:link, #business a:hover, #business a:active, #business a:visited {
-  color: #DC9F09;
+  color: #01193F;
+  text-decoration: none;
 }
 
 #nope a:link, #nope a:hover, #nope a:active, #nope a:visited {
@@ -93,16 +116,8 @@
   }
 }
 
-#business h4 {
-  line-height: 88px;
-  padding: 0;
-  text-decoration: underline;
-}
-
-@media (max-width: 800px) {
-  #business h4 {
-    line-height: 68px;
-  }
+#business {
+  margin-bottom: 20px;
 }
 
 .button {

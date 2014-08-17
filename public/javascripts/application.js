@@ -10,13 +10,7 @@ $(function() {
   var section4Height = $('#section_4').height();
   var section4Width = $('#section_4').width();
   
-  if (pageWidth > 1024) {
-    var yolo = '40px';
-  } else if (pageWidth<=1024) {
-    var yolo = '80px';
-  }
-
-  $('#iphone_wrap').css('top', yolo )
+  var yolo = $('#iphone_wrap').css('top');
 
   $('#section_2').waypoint(function(direction) {
     if(direction==='down') {
@@ -72,16 +66,6 @@ $(function() {
     });
   }
 
-  $('#section_2').waypoint(function() {
-    $('#cycle_2').cycle({ 
-      fx:'scrollLeft',
-      timeout:  4000 
-    });
-    },{
-    offset: '15%',
-    triggerOnce: true
-  });
-
   $('#section_3').waypoint(function(direction) {
     if(direction==='down') {
       $('#cycle_2').fadeOut('slow', function(){
@@ -100,16 +84,6 @@ $(function() {
     }
   }, {
     offset: '20%'
-  });
-
-  $('#section_3').waypoint(function() {
-    $('#cycle_3').cycle({ 
-      fx:'scrollLeft',
-      timeout:  4000 
-    });
-    },{
-    offset: '15%',
-    triggerOnce: true
   });
 
   // $('#section_4').waypoint(function(direction) {
@@ -214,14 +188,13 @@ $(function() {
   }
 
   $('#cycle').cycle({ 
-    fx:'fade,wipe,scrollLeft, fade',
+    fx:'scrollRight, scrollLeft',
     randomizeEffects: false, 
-    timeoutFn: calculateTimeout, 
-    clip:   't2b'  
+    timeoutFn: calculateTimeout 
   });
 
   function calculateTimeout(currElement, nextElement, opts, isForward) { 
-    var timeouts = [2,0.4,3,8]; 
+    var timeouts = [4,4]; 
     var index = opts.currSlide; 
     return timeouts[index] * 1000; 
   } 
